@@ -1,0 +1,206 @@
+main: me.Tiernanator.Builder.Main
+version: 2.0
+name: Builder
+description: A Plugin that allows you to edit the world
+load: POSTWORLD
+author: Tiernanator
+website: None
+database: false
+depend: [Utilities]
+prefix: Builder
+softdepend: []
+loadbefore: []
+
+commands:
+    materials:
+        description: Lists all the Material Types.
+        #aliases: allMaterials
+#        permission: build.*
+    cuboid:
+        description: Select a Cuboid Region for editting.
+#        permission: build.cuboid
+    fill:
+        description: Fill an area with the specified Material.
+#        permission: build.fill
+    replace:
+        description: Replace one type of Material in an area with another.
+#        permission: build.replace
+    wand:
+        description: Gives you a world building wand.
+#        permission: build.wand
+    remove:
+        description: Removes the specified material from a zone.
+#        permission: build.remove
+    changeTo:
+        description: Changes all the solid blocks in the area to the specified material.
+        #aliases: change
+#        permission: build.changeTo
+    clear:
+        description: Remove all blocks in the area.
+        #aliases: removeAll
+#        permission: build.clear
+    save:
+        description: Save a named template of the zone.
+        #aliases: copy
+#        permission: build.save
+    move:
+        description: Move a saved template.
+        #aliases: paste
+#        permission: build.move
+#    protect:
+#        description: Protect the selected zone.
+#        permission: build.protect
+    getTemplate:
+        description: Get a previously saved template.
+        #aliases: getSave
+#        permission: build.getTemplate
+    removeTemplate:
+        description: Remove a saved template.
+        #aliases: getSave
+#        permission: build.removeTemplate
+    listTemplates:
+        description: Get a available Templates.
+        #aliases: getSave
+#        permission: build.listTemplates
+    drain:
+        description: Remove all the liquids from a zone.
+#       permission: build.drain
+    flood:
+        description: Flood a zone with lava or water.
+#        permission: build.flood
+    sphere:
+        description: Generate a spherical Region of given radius and material.
+#        permission: build.sphere
+    dome:
+        description: Generate a dome Region of given radius and material.
+#        permission: build.dome
+    bowl:
+        description: Generate a bowl Region of given radius and material.
+#        permission: build.bowl
+    cylinder:
+        description: Generate a cylindrical Region of given radius, height and material.
+#        permission: build.cylinder
+    circle:
+        description: Generate a circular Region of given radius and material.
+#        permission: build.circle
+    set:
+        description: Select a location without the wand.
+#        permission: build.set
+    walls:
+        description: Build walls around your selected zone.
+#        permission: build.walls
+    cap:
+        description: Build a flat cap for your selected zone.
+#        permission: build.cap
+    base:
+        description: Build a flat base around your selected zone.
+#        permission: build.base
+    corners:
+        description: Set the corners of a selected zone to a given material.
+#        permission: build.corners
+    flip:
+        description: Flip the selected region upside-down.
+#        permission: build.flip
+    platform:
+        description: Place a block below your feet.
+#        permission: build.platform
+    butcher:
+        description: Kill all the entities of the specified type in the region.
+    undo:
+        description: Undo your previous edits.
+    volume:
+        description: Get the volume of your selected region.
+#    setbiome:
+#        description: Set the selected Region to a specific biome.
+#        permission: build.platform
+        
+#permissions:
+#    build.*:
+#        description: Gives access to all Builder permissions.
+#        children:
+#           build.fill: true
+#            build.wand: true
+#            build.remove: true
+#            build.replace: true
+#            build.changeTo: true
+#            build.clear: true
+#           build.save: true
+#            build.move: true
+#            build.protect: true
+#            build.getTemplate: true
+#            build.drain: true
+#            build.flood: true
+#            build.set: true
+#            build.walls: true
+#            build.cap: true
+#            build.base: true
+#            build.platform: true
+#            build.sphere: true
+#            build.cylinder: true
+#            build.circle: true
+#            build.dome: true
+#            build.bowl: true
+#            build.flip: true
+#    build.fill:
+#        description: Allows you to use the /fill command.
+#        default: op
+#    build.wand:
+#        description: Allows you to get a Building Wand.
+#        default: op
+#    build.remove:
+#        description: Allows you to use the /remove command.
+#        default: op
+#    build.replace:
+#       description: Allows you to use the /replace command.
+#        default: op
+#    build.changeTo:
+#        description: Allows you to use the /changeTo command.
+#        default: op
+#    build.clear:
+#        description: Allows you to use the /clear command.
+#        default: op
+#    build.save:
+#       description: Allows you to use the /save command.
+#        default: op
+#    build.move:
+#        description: Allows you to use the /move command.
+#        default: op
+#    build.protect:
+#        description: Allows you to use the /protect command.
+#        default: op
+#    build.getTemplate:
+#        description: Allows you to use the /getTemplate command.
+#        default: op
+#    build.drain:
+#        description: Allows you to use the /drain command.
+#        default: op
+#    build.flood:
+#        description: Allows you to use the /flood command.
+#        default: op
+#    build.sphere:
+#        description: Allows you to use the /sphere command.
+#        default: op
+#    build.dome:
+#        description: Allows you to use the /dome command.
+#        default: op
+#    build.bowl:
+#        description: Allows you to use the /bowl command.
+#        default: op
+#    build.set:
+#        description: Allows you to use the /set command.
+#       default: op
+#    build.walls:
+#        description: Allows you to use the /set command.
+#        default: op
+#    build.base:
+#        description: Allows you to use the /base command.
+#        default: op
+#    build.cap:
+#        description: Allows you to use the /cap command.
+#        default: op
+#    build.corners:
+#       description: Allows you to use the /corners command.
+#        default: op
+#    build.flip:
+#        description: Allows you to use the /flip command.
+#        default: op
