@@ -8,7 +8,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import me.Tiernanator.Builder.Main;
+import me.Tiernanator.Builder.BuilderMain;
 import me.Tiernanator.Colours.Colour;
 import me.Tiernanator.Utilities.Locations.Region.Region;
 import me.Tiernanator.Utilities.Locations.Zones.ZoneName;
@@ -16,7 +16,7 @@ import me.Tiernanator.Utilities.MetaData.MetaData;
 
 public class GetTemplate implements CommandExecutor {
 
-	private static Main plugin;
+	private static BuilderMain plugin;
 
 	private ChatColor warning = Colour.WARNING.getColour();
 	private ChatColor informative = Colour.INFORMATIVE.getColour();
@@ -25,7 +25,7 @@ public class GetTemplate implements CommandExecutor {
 	private ChatColor bad = Colour.BAD.getColour();
 	private ChatColor regal = Colour.REGAL.getColour();
 	
-	public GetTemplate(Main main) {
+	public GetTemplate(BuilderMain main) {
 		plugin = main;
 	}
 
@@ -39,11 +39,6 @@ public class GetTemplate implements CommandExecutor {
 		}
 		
 		Player player = (Player) sender;
-		
-//		if(!(player.hasPermission("build.getTemplate"))) {
-//			player.sendMessage(warning + "You do not have permission to use this command.");
-//			return true;
-//		}
 		
 		List<String> allTemplates = TemplateConfig.allTemplateNames();
 		if(allTemplates == null || allTemplates.isEmpty()) {
@@ -73,7 +68,6 @@ public class GetTemplate implements CommandExecutor {
 			return false;
 		}
 		
-//		Region region = new Region(UndoConfig.getRegion(name));
 		Region region = TemplateConfig.getRegion(name);
 		
 		if(region.allBlocks() == null) {

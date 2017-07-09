@@ -6,20 +6,20 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import me.Tiernanator.Builder.Main;
+import me.Tiernanator.Builder.BuilderMain;
 import me.Tiernanator.Colours.Colour;
 
 public class Undo implements CommandExecutor {
 
 	@SuppressWarnings("unused")
-	private static Main plugin;
+	private static BuilderMain plugin;
 
 	private ChatColor warning = Colour.WARNING.getColour();
 //	private ChatColor informative = Colour.INFORMATIVE.getColour();
 //	private ChatColor highlight = Colour.HIGHLIGHT.getColour();
 //	private ChatColor good = Colour.GOOD.getColour();
 
-	public Undo(Main main) {
+	public Undo(BuilderMain main) {
 		plugin = main;
 	}
 

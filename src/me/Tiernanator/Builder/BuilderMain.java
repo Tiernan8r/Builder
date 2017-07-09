@@ -1,9 +1,5 @@
 package me.Tiernanator.Builder;
 
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.sql.Statement;
-
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -42,9 +38,8 @@ import me.Tiernanator.Builder.WorldTemplates.RemoveTemplate;
 import me.Tiernanator.Builder.WorldTemplates.Save;
 import me.Tiernanator.Builder.WorldTemplates.TemplateConfig;
 import me.Tiernanator.SQL.SQLServer;
-import me.Tiernanator.SQL.MySQL.MySQL;
 
-public class Main extends JavaPlugin {
+public class BuilderMain extends JavaPlugin {
 	
 	@Override
 	public void onEnable() {
@@ -58,12 +53,12 @@ public class Main extends JavaPlugin {
 
 	@Override
 	public void onDisable() {
-		try {
-//			getSQL().getConnection().close();
-			getSQL().closeConnection();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+//		try {
+////			getSQL().getConnection().close();
+//			getSQL().closeConnection();
+//		} catch (SQLException e) {
+//			e.printStackTrace();
+//		}
 	}
 
 	private void registerCommands() {
@@ -114,89 +109,15 @@ public class Main extends JavaPlugin {
 		UndoConfig.setPlugin(this);
 	}
 
-	private static MySQL mySQL;
-
 	private void initialiseSQL() {
 		
-		mySQL = new MySQL(SQLServer.HOSTNAME, SQLServer.PORT,  SQLServer.DATABASE,
-				SQLServer.USERNAME, SQLServer.PASSWORD);
-		
-		Connection connection = null;
-		try {
-			connection = mySQL.openConnection();
-		} catch (SQLException | ClassNotFoundException e) {
-			e.printStackTrace();
-		}
-		
-		Statement statement = null;
-		try {
-			statement = connection.createStatement();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		
-		String query = "USE " + "tierstap41635DB" + ";";
-		
-		statement = null;
-		try {
-			statement = connection.createStatement();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		
-		try {
-			statement.execute(query);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		
-		query = "CREATE TABLE IF NOT EXISTS PlayerTime ( "
-				+ "UUID varchar(36), "
-				+ "Time int"
-				+ ");";
-		
-		statement = null;
-		try {
-			statement = connection.createStatement();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		
-		try {
-			statement.execute(query);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		
-		query = "CREATE TABLE IF NOT EXISTS Templates ( "
+		String query = "CREATE TABLE IF NOT EXISTS Templates ( "
 				+ "ID int AUTO_INCREMENT,"
 				+ "Name varchar(255), "
 				+ "PRIMARY KEY (ID)"
 				+ ");";
+		SQLServer.executeQuery(query);
 		
-		statement = null;
-		try {
-			statement = connection.createStatement();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		
-		try {
-			statement.execute(query);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		
-		try {
-			statement.close();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		
-	}
-
-	public static MySQL getSQL() {
-		return mySQL;
 	}
 
 }

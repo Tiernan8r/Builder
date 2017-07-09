@@ -13,14 +13,14 @@ import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
-import me.Tiernanator.Builder.Main;
+import me.Tiernanator.Builder.BuilderMain;
 import me.Tiernanator.Builder.Events.WandSelect;
 import me.Tiernanator.Colours.Colour;
 import me.Tiernanator.Utilities.Locations.Region.Region;
 
 public class Butcher implements CommandExecutor {
 
-	private static Main plugin;
+	private static BuilderMain plugin;
 
 	private ChatColor warning = Colour.WARNING.getColour();
 	private ChatColor informative = Colour.INFORMATIVE.getColour();
@@ -29,7 +29,7 @@ public class Butcher implements CommandExecutor {
 	private ChatColor bad = Colour.BAD.getColour();
 	private ChatColor caution = Colour.CAUTION.getColour();
 
-	public Butcher(Main main) {
+	public Butcher(BuilderMain main) {
 		plugin = main;
 	}
 

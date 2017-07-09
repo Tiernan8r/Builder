@@ -11,7 +11,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 
-import me.Tiernanator.Builder.Main;
+import me.Tiernanator.Builder.BuilderMain;
 import me.Tiernanator.Colours.Colour;
 import me.Tiernanator.Utilities.Locations.Region.Region;
 import me.Tiernanator.Utilities.Locations.Region.Cuboids.Cuboid;
@@ -19,7 +19,7 @@ import me.Tiernanator.Utilities.Players.SelectAction;
 
 public final class WandSelect implements Listener {
 
-	public WandSelect(Main main) {
+	public WandSelect(BuilderMain main) {
 	}
 
 	private static HashMap<Player, List<Location>> locationsMap = new HashMap<Player, List<Location>>();

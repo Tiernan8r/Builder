@@ -15,21 +15,21 @@ import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-import me.Tiernanator.Builder.Main;
+import me.Tiernanator.Builder.BuilderMain;
 import me.Tiernanator.Colours.Colour;
 import me.Tiernanator.Utilities.Items.Item;
 
 public class Wand implements CommandExecutor {
 
 	@SuppressWarnings("unused")
-	private static Main plugin;
+	private static BuilderMain plugin;
 
 	private ChatColor warning = Colour.WARNING.getColour();
 	private ChatColor informative = Colour.INFORMATIVE.getColour();
 	private ChatColor good = Colour.GOOD.getColour();
 	private ChatColor bad = Colour.BAD.getColour();
 
-	public Wand(Main main) {
+	public Wand(BuilderMain main) {
 		plugin = main;
 	}
 

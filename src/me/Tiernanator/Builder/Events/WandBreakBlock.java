@@ -8,14 +8,14 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.inventory.ItemStack;
 
-import me.Tiernanator.Builder.Main;
+import me.Tiernanator.Builder.BuilderMain;
 
 public class WandBreakBlock implements Listener {
 	
 	@SuppressWarnings("unused")
-	private Main plugin;
+	private BuilderMain plugin;
 	
-	public WandBreakBlock(Main main) {
+	public WandBreakBlock(BuilderMain main) {
 		plugin = main;
 	}
 	

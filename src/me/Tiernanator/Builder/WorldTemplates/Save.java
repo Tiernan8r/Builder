@@ -6,7 +6,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import me.Tiernanator.Builder.Main;
+import me.Tiernanator.Builder.BuilderMain;
 import me.Tiernanator.Builder.Events.WandSelect;
 import me.Tiernanator.Colours.Colour;
 import me.Tiernanator.Utilities.Locations.Region.Region;
@@ -15,14 +15,14 @@ import me.Tiernanator.Utilities.MetaData.MetaData;
 
 public class Save implements CommandExecutor {
 
-	private static Main plugin;
+	private static BuilderMain plugin;
 
 	private ChatColor warning = Colour.WARNING.getColour();
 	private ChatColor informative = Colour.INFORMATIVE.getColour();
 	private ChatColor highlight = Colour.HIGHLIGHT.getColour();
 	private ChatColor good = Colour.GOOD.getColour();
 	
-	public Save(Main main) {
+	public Save(BuilderMain main) {
 		plugin = main;
 	}
 	

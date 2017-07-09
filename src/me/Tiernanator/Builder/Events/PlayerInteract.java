@@ -12,16 +12,16 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 
-import me.Tiernanator.Builder.Main;
+import me.Tiernanator.Builder.BuilderMain;
 import me.Tiernanator.Utilities.Players.PlayerTime;
 import me.Tiernanator.Utilities.Players.SelectAction;
 
 public class PlayerInteract implements Listener {
 	
 	@SuppressWarnings("unused")
-	private Main plugin;
+	private BuilderMain plugin;
 	
-	public PlayerInteract(Main main) {
+	public PlayerInteract(BuilderMain main) {
 		plugin = main;
 	}
 	

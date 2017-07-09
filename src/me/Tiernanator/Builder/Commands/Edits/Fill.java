@@ -6,7 +6,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import me.Tiernanator.Builder.Main;
+import me.Tiernanator.Builder.BuilderMain;
 import me.Tiernanator.Builder.Events.WandSelect;
 import me.Tiernanator.Colours.Colour;
 import me.Tiernanator.Materials.BuildingMaterial;
@@ -16,14 +16,14 @@ import me.Tiernanator.Utilities.Locations.Region.Region;
 public class Fill implements CommandExecutor {
 
 	@SuppressWarnings("unused")
-	private static Main plugin;
+	private static BuilderMain plugin;
 
 	private ChatColor warning = Colour.WARNING.getColour();
 	private ChatColor informative = Colour.INFORMATIVE.getColour();
 	private ChatColor highlight = Colour.HIGHLIGHT.getColour();
 	private ChatColor good = Colour.GOOD.getColour();
 
-	public Fill(Main main) {
+	public Fill(BuilderMain main) {
 		plugin = main;
 	}
 

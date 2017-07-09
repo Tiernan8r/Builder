@@ -7,7 +7,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import me.Tiernanator.Builder.Main;
+import me.Tiernanator.Builder.BuilderMain;
 import me.Tiernanator.Colours.Colour;
 import me.Tiernanator.Utilities.Locations.RelativeLocation;
 import me.Tiernanator.Utilities.Players.PlayerTime;
@@ -15,11 +15,11 @@ import me.Tiernanator.Utilities.Players.SelectAction;
 
 public class Set implements CommandExecutor {
 
-	private static Main plugin;
+	private static BuilderMain plugin;
 
 	private ChatColor warning = Colour.WARNING.getColour();
 
-	public Set(Main main) {
+	public Set(BuilderMain main) {
 		plugin = main;
 	}
 	

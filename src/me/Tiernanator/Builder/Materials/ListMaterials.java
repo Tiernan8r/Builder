@@ -11,7 +11,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-import me.Tiernanator.Builder.Main;
+import me.Tiernanator.Builder.BuilderMain;
 import me.Tiernanator.Colours.Colour;
 import me.Tiernanator.Materials.BuildingMaterial;
 import me.Tiernanator.Menu.Menu;
@@ -23,9 +23,9 @@ public class ListMaterials implements CommandExecutor {
 	private static ChatColor warning = Colour.WARNING.getColour();
 
 	@SuppressWarnings("unused")
-	private Main plugin;
+	private BuilderMain plugin;
 	//sets the value of the plugin to the main class
-	public ListMaterials(Main main) {
+	public ListMaterials(BuilderMain main) {
 		plugin = main;
 	}
 	

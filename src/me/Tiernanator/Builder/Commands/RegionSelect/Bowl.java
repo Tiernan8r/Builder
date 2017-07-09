@@ -9,7 +9,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import me.Tiernanator.Builder.Main;
+import me.Tiernanator.Builder.BuilderMain;
 import me.Tiernanator.Builder.Events.WandSelect;
 import me.Tiernanator.Colours.Colour;
 import me.Tiernanator.Utilities.Locations.Region.Region;
@@ -18,7 +18,7 @@ import me.Tiernanator.Utilities.Locations.Region.Shapes;
 public class Bowl implements CommandExecutor {
 
 	@SuppressWarnings("unused")
-	private static Main plugin;
+	private static BuilderMain plugin;
 
 	private ChatColor warning = Colour.WARNING.getColour();
 	private ChatColor informative = Colour.INFORMATIVE.getColour();
@@ -26,7 +26,7 @@ public class Bowl implements CommandExecutor {
 	private ChatColor good = Colour.GOOD.getColour();
 	private ChatColor bad = Colour.BAD.getColour();
 
-	public Bowl(Main main) {
+	public Bowl(BuilderMain main) {
 		plugin = main;
 	}
 

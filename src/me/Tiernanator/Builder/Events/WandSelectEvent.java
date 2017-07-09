@@ -7,7 +7,7 @@ import org.bukkit.event.HandlerList;
 
 import me.Tiernanator.Utilities.Players.SelectAction;
 
-//This is the custom wand select block event that is called by PlayerInteract, it just contains fub=nctions that
+//This is the custom wand select block event that is called by PlayerInteract, it just contains functions that
 //return all the values needed
 
 public final class WandSelectEvent extends Event {

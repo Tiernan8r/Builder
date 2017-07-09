@@ -10,16 +10,16 @@ import org.bukkit.World;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 
-import me.Tiernanator.Builder.Main;
+import me.Tiernanator.Builder.BuilderMain;
 import me.Tiernanator.File.ConfigAccessor;
 import me.Tiernanator.Utilities.Locations.Region.Region;
 import me.Tiernanator.Utilities.Locations.Region.Cuboids.Cuboid;
 
 public class UndoConfig {
 
-	private static Main plugin;
+	private static BuilderMain plugin;
 
-	public static void setPlugin(Main main) {
+	public static void setPlugin(BuilderMain main) {
 		plugin = main;
 	}
 	

@@ -8,7 +8,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import me.Tiernanator.Builder.Main;
+import me.Tiernanator.Builder.BuilderMain;
 import me.Tiernanator.Colours.Colour;
 import me.Tiernanator.Utilities.Locations.Region.Region;
 import me.Tiernanator.Utilities.Locations.Zones.ZoneName;
@@ -16,7 +16,7 @@ import me.Tiernanator.Utilities.Locations.Zones.ZoneName;
 public class RemoveTemplate implements CommandExecutor {
 
 	@SuppressWarnings("unused")
-	private static Main plugin;
+	private static BuilderMain plugin;
 
 	private ChatColor warning = Colour.WARNING.getColour();
 	private ChatColor informative = Colour.INFORMATIVE.getColour();
@@ -25,7 +25,7 @@ public class RemoveTemplate implements CommandExecutor {
 	private ChatColor bad = Colour.BAD.getColour();
 	private ChatColor regal = Colour.REGAL.getColour();
 	
-	public RemoveTemplate(Main main) {
+	public RemoveTemplate(BuilderMain main) {
 		plugin = main;
 	}
 

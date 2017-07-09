@@ -8,20 +8,20 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import me.Tiernanator.Builder.Main;
+import me.Tiernanator.Builder.BuilderMain;
 import me.Tiernanator.Colours.Colour;
 
 public class ListTemplates implements CommandExecutor {
 
 	@SuppressWarnings("unused")
-	private static Main plugin;
+	private static BuilderMain plugin;
 
 	private ChatColor warning = Colour.WARNING.getColour();
 	private ChatColor informative = Colour.INFORMATIVE.getColour();
 	private ChatColor good = Colour.GOOD.getColour();
 	private ChatColor bad = Colour.BAD.getColour();
 	
-	public ListTemplates(Main main) {
+	public ListTemplates(BuilderMain main) {
 		plugin = main;
 	}
 
@@ -35,11 +35,6 @@ public class ListTemplates implements CommandExecutor {
 		}
 		
 		Player player = (Player) sender;
-		
-//		if(!(player.hasPermission("build.listTemplates"))) {
-//			player.sendMessage(warning + "You do not have permission to use this command.");
-//			return true;
-//		}
 		
 		List<String> allTemplates = TemplateConfig.allTemplateNames();
 		if(allTemplates == null || allTemplates.isEmpty()) {

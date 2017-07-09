@@ -10,7 +10,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import me.Tiernanator.Builder.Main;
+import me.Tiernanator.Builder.BuilderMain;
 import me.Tiernanator.Builder.Events.WandSelect;
 import me.Tiernanator.Builder.Undo.UndoConfig;
 import me.Tiernanator.Colours.Colour;
@@ -19,13 +19,13 @@ import me.Tiernanator.Utilities.MetaData.MetaData;
 
 public class Move implements CommandExecutor {
 
-	private static Main plugin;
+	private static BuilderMain plugin;
 
 	private ChatColor warning = Colour.WARNING.getColour();
 	private ChatColor highlight = Colour.HIGHLIGHT.getColour();
 	private ChatColor good = Colour.GOOD.getColour();
 
-	public Move(Main main) {
+	public Move(BuilderMain main) {
 		plugin = main;
 	}
 
@@ -41,11 +41,6 @@ public class Move implements CommandExecutor {
 
 		Player player = (Player) sender;
 
-		// if (!(player.hasPermission("build.move"))) {
-		// player.sendMessage(warning
-		// + "You do not have permission to use this command.");
-		// return true;
-		// }
 		Region region = WandSelect.getRegion(player);
 
 		if (region.allBlocks() == null) {

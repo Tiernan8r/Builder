@@ -1,4 +1,4 @@
-main: me.Tiernanator.Builder.Main
+main: me.Tiernanator.Builder.BuilderMain
 version: 2.0
 name: Builder
 description: A Plugin that allows you to edit the world

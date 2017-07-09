@@ -5,19 +5,19 @@ import java.util.List;
 import org.bukkit.Location;
 import org.bukkit.World;
 
-import me.Tiernanator.Builder.Main;
+import me.Tiernanator.Builder.BuilderMain;
 import me.Tiernanator.File.ConfigAccessor;
 import me.Tiernanator.Utilities.Locations.Region.Region;
 
 public class GetTemplateZone {
 
-	public static Main plugin;
+	public static BuilderMain plugin;
 
-	public GetTemplateZone(Main main) {
+	public GetTemplateZone(BuilderMain main) {
 		plugin = main;
 	}
 	
-	public void setPlugin(Main m) {
+	public void setPlugin(BuilderMain m) {
 		plugin = m;
 	}
 	
