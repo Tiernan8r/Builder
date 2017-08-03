@@ -8,7 +8,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import me.Tiernanator.Builder.BuilderMain;
-import me.Tiernanator.Colours.Colour;
+import me.Tiernanator.Utilities.Colours.Colour;
 import me.Tiernanator.Utilities.Locations.RelativeLocation;
 import me.Tiernanator.Utilities.Players.PlayerTime;
 import me.Tiernanator.Utilities.Players.SelectAction;

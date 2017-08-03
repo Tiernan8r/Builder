@@ -7,7 +7,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import me.Tiernanator.Builder.BuilderMain;
-import me.Tiernanator.Colours.Colour;
+import me.Tiernanator.Utilities.Colours.Colour;
 
 public class Undo implements CommandExecutor {
 

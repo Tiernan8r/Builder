@@ -10,9 +10,9 @@ import org.bukkit.entity.Player;
 import me.Tiernanator.Builder.BuilderMain;
 import me.Tiernanator.Builder.Events.WandSelect;
 import me.Tiernanator.Builder.Undo.UndoConfig;
-import me.Tiernanator.Colours.Colour;
-import me.Tiernanator.Materials.BuildingMaterial;
+import me.Tiernanator.Utilities.Colours.Colour;
 import me.Tiernanator.Utilities.Locations.Region.Region;
+import me.Tiernanator.Utilities.Materials.BuildingMaterial;
 
 public class Flood implements CommandExecutor {
 

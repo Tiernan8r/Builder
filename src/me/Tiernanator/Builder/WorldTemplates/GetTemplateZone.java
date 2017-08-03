@@ -6,7 +6,7 @@ import org.bukkit.Location;
 import org.bukkit.World;
 
 import me.Tiernanator.Builder.BuilderMain;
-import me.Tiernanator.File.ConfigAccessor;
+import me.Tiernanator.Utilities.File.ConfigAccessor;
 import me.Tiernanator.Utilities.Locations.Region.Region;
 
 public class GetTemplateZone {

@@ -10,10 +10,9 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import me.Tiernanator.Builder.BuilderMain;
-import me.Tiernanator.Colours.Colour;
-import me.Tiernanator.Materials.BuildingMaterial;
-import me.Tiernanator.Materials.IsMaterial;
+import me.Tiernanator.Utilities.Colours.Colour;
 import me.Tiernanator.Utilities.Locations.RelativeLocation;
+import me.Tiernanator.Utilities.Materials.BuildingMaterial;
 
 public class Platform implements CommandExecutor {
 
@@ -58,7 +57,7 @@ public class Platform implements CommandExecutor {
 			return true;
 		} else {
 			String materialName = args[0].toUpperCase();
-			if(!(IsMaterial.isMaterial(materialName))) {
+			if(!(BuildingMaterial.isMaterial(materialName))) {
 				player.sendMessage(warning + "That is not a material, use the command: " + informative + "/listMaterials" + warning + " to find out what the Materials are.");
 				return false;
 			}

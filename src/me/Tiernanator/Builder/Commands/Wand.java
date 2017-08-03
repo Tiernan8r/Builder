@@ -16,7 +16,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import me.Tiernanator.Builder.BuilderMain;
-import me.Tiernanator.Colours.Colour;
+import me.Tiernanator.Utilities.Colours.Colour;
 import me.Tiernanator.Utilities.Items.Item;
 
 public class Wand implements CommandExecutor {

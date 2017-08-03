@@ -9,10 +9,9 @@ import org.bukkit.entity.Player;
 import me.Tiernanator.Builder.BuilderMain;
 import me.Tiernanator.Builder.Events.WandSelect;
 import me.Tiernanator.Builder.Undo.UndoConfig;
-import me.Tiernanator.Colours.Colour;
-import me.Tiernanator.Materials.BuildingMaterial;
-import me.Tiernanator.Materials.IsMaterial;
+import me.Tiernanator.Utilities.Colours.Colour;
 import me.Tiernanator.Utilities.Locations.Region.Region;
+import me.Tiernanator.Utilities.Materials.BuildingMaterial;
 
 public class Remove implements CommandExecutor {
 
@@ -57,7 +56,7 @@ public class Remove implements CommandExecutor {
 		}
 		
 		String materialName = args[0].toUpperCase();
-		if(!(IsMaterial.isMaterial(materialName))) {
+		if(!(BuildingMaterial.isMaterial(materialName))) {
 			player.sendMessage(
 					warning + "The material to be replaced is not a material, use the command: "
 							+ informative + "/materials" + warning
@@ -67,7 +66,7 @@ public class Remove implements CommandExecutor {
 		
 		if (!(region.contains(material.getMaterial()))) {
 			player.sendMessage(bad + "There are no blocks of the material "
-					+ informative + material + bad
+					+ informative + materialName + bad
 					+ " to replace in this area.");
 			return false;
 		}

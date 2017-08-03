@@ -12,10 +12,9 @@ import org.bukkit.entity.Player;
 import me.Tiernanator.Builder.BuilderMain;
 import me.Tiernanator.Builder.Events.WandSelect;
 import me.Tiernanator.Builder.Undo.UndoConfig;
-import me.Tiernanator.Colours.Colour;
-import me.Tiernanator.Materials.BuildingMaterial;
-import me.Tiernanator.Materials.IsMaterial;
+import me.Tiernanator.Utilities.Colours.Colour;
 import me.Tiernanator.Utilities.Locations.Region.Cuboids.Cuboid;
+import me.Tiernanator.Utilities.Materials.BuildingMaterial;
 
 public class Cap implements CommandExecutor {
 
@@ -67,7 +66,7 @@ public class Cap implements CommandExecutor {
 		Cuboid cuboid = new Cuboid(location1, location2);
 		
 		String materialName = args[0].toUpperCase();
-		if(!(IsMaterial.isMaterial(materialName))) {
+		if(!(BuildingMaterial.isMaterial(materialName))) {
 			player.sendMessage(
 					warning + "The material to be replaced is not a material, use the command: "
 							+ informative + "/materials" + warning
@@ -79,7 +78,7 @@ public class Cap implements CommandExecutor {
 		UndoConfig.saveRegion(player, cuboid, "undos");
 		cuboid.cap(material);
 		
-		player.sendMessage(good + "A cap for the Cuboid between " + highlight + location1.getX() + " " + location1.getY() + " " + location1.getZ() + good + " and " + highlight + location2.getX() + " " + location2.getY() + " " + location2.getZ() + good + " has been built from the Material " + highlight + materialName + good + ".");
+		player.sendMessage(good + "A cap for the Region between " + highlight + location1.getX() + " " + location1.getY() + " " + location1.getZ() + good + " and " + highlight + location2.getX() + " " + location2.getY() + " " + location2.getZ() + good + " has been built from the Material " + highlight + materialName + good + ".");
 		
 		return true;
 	}

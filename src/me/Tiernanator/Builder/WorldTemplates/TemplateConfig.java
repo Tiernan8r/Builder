@@ -9,9 +9,9 @@ import org.bukkit.World;
 import org.bukkit.block.Block;
 
 import me.Tiernanator.Builder.BuilderMain;
-import me.Tiernanator.File.ConfigAccessor;
-import me.Tiernanator.SQL.SQLServer;
+import me.Tiernanator.Utilities.File.ConfigAccessor;
 import me.Tiernanator.Utilities.Locations.Region.Region;
+import me.Tiernanator.Utilities.SQL.SQLServer;
 
 public class TemplateConfig {
 

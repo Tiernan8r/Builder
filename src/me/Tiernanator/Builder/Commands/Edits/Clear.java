@@ -9,9 +9,9 @@ import org.bukkit.entity.Player;
 import me.Tiernanator.Builder.BuilderMain;
 import me.Tiernanator.Builder.Events.WandSelect;
 import me.Tiernanator.Builder.Undo.UndoConfig;
-import me.Tiernanator.Colours.Colour;
-import me.Tiernanator.Materials.BuildingMaterial;
+import me.Tiernanator.Utilities.Colours.Colour;
 import me.Tiernanator.Utilities.Locations.Region.Region;
+import me.Tiernanator.Utilities.Materials.BuildingMaterial;
 
 public class Clear implements CommandExecutor {
 
@@ -49,7 +49,7 @@ public class Clear implements CommandExecutor {
 		}
 		
 		UndoConfig.saveRegion(player, region, "undos");
-		region.fill(BuildingMaterial.AIR);
+		region.changeTo(BuildingMaterial.getBuildingMaterial("AIR"));
 		
 		player.sendMessage(good + "The selected Region has been cleared of all blocks.");
 		

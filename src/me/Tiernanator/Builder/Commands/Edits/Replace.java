@@ -9,10 +9,9 @@ import org.bukkit.entity.Player;
 import me.Tiernanator.Builder.BuilderMain;
 import me.Tiernanator.Builder.Events.WandSelect;
 import me.Tiernanator.Builder.Undo.UndoConfig;
-import me.Tiernanator.Colours.Colour;
-import me.Tiernanator.Materials.BuildingMaterial;
-import me.Tiernanator.Materials.IsMaterial;
+import me.Tiernanator.Utilities.Colours.Colour;
 import me.Tiernanator.Utilities.Locations.Region.Region;
+import me.Tiernanator.Utilities.Materials.BuildingMaterial;
 
 public class Replace implements CommandExecutor {
 
@@ -65,7 +64,7 @@ public class Replace implements CommandExecutor {
 		}
 
 		String currentMaterialName = args[0].toUpperCase();
-		if (!(IsMaterial.isMaterial(currentMaterialName))) {
+		if (!(BuildingMaterial.isMaterial(currentMaterialName))) {
 			player.sendMessage(
 					warning + "The material to be replaced is not a material, use the command: "
 							+ informative + "/materials" + warning
@@ -75,7 +74,7 @@ public class Replace implements CommandExecutor {
 		BuildingMaterial currentMaterial = BuildingMaterial
 				.getBuildingMaterial(currentMaterialName);
 		
-		if (!(region.contains(currentMaterial.getMaterial()))) {
+		if (!(region.contains(currentMaterial))) {
 			player.sendMessage(bad + "There are no blocks of the material "
 					+ informative + currentMaterialName + bad
 					+ " to replace in this area.");
@@ -83,10 +82,10 @@ public class Replace implements CommandExecutor {
 		}
 
 		String replacementMaterialName = args[1].toUpperCase();
-		if (!(IsMaterial.isMaterial(replacementMaterialName))) {
+		if (!(BuildingMaterial.isMaterial(replacementMaterialName))) {
 			player.sendMessage(
 					warning + "The replacement is not a material, use the command: "
-							+ informative + "/listMaterials" + warning
+							+ informative + "/materials" + warning
 							+ " to find out what the Materials are.");
 			return false;
 		}

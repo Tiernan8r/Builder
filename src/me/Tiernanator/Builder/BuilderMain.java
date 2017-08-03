@@ -37,7 +37,7 @@ import me.Tiernanator.Builder.WorldTemplates.Move;
 import me.Tiernanator.Builder.WorldTemplates.RemoveTemplate;
 import me.Tiernanator.Builder.WorldTemplates.Save;
 import me.Tiernanator.Builder.WorldTemplates.TemplateConfig;
-import me.Tiernanator.SQL.SQLServer;
+import me.Tiernanator.Utilities.SQL.SQLServer;
 
 public class BuilderMain extends JavaPlugin {
 	

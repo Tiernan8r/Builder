@@ -15,7 +15,7 @@ import org.bukkit.scheduler.BukkitRunnable;
 
 import me.Tiernanator.Builder.BuilderMain;
 import me.Tiernanator.Builder.Events.WandSelect;
-import me.Tiernanator.Colours.Colour;
+import me.Tiernanator.Utilities.Colours.Colour;
 import me.Tiernanator.Utilities.Locations.Region.Region;
 
 public class Butcher implements CommandExecutor {

@@ -13,7 +13,7 @@ import org.bukkit.entity.Player;
 
 import me.Tiernanator.Builder.BuilderMain;
 import me.Tiernanator.Builder.Events.WandSelect;
-import me.Tiernanator.Colours.Colour;
+import me.Tiernanator.Utilities.Colours.Colour;
 import me.Tiernanator.Utilities.Locations.Region.Region;
 import me.Tiernanator.Utilities.Locations.Region.Shapes;
 
