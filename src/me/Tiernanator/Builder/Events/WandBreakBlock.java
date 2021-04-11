@@ -1,5 +1,6 @@
 package me.Tiernanator.Builder.Events;
 
+import me.Tiernanator.Builder.BuilderMain;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -7,8 +8,6 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.inventory.ItemStack;
-
-import me.Tiernanator.Builder.BuilderMain;
 
 public class WandBreakBlock implements Listener {
 	

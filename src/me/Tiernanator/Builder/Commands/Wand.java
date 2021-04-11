@@ -17,7 +17,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 import me.Tiernanator.Builder.BuilderMain;
 import me.Tiernanator.Utilities.Colours.Colour;
-import me.Tiernanator.Utilities.Items.Item;
+import me.Tiernanator.Utilities.Items.ItemUtility;
 
 public class Wand implements CommandExecutor {
 
@@ -33,6 +33,7 @@ public class Wand implements CommandExecutor {
 		plugin = main;
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public boolean onCommand(CommandSender sender, Command command,
 			String label, String[] args) {
@@ -56,9 +57,13 @@ public class Wand implements CommandExecutor {
 		
 		ItemStack wand;
 		if(random < 5) {
-			wand = Item.renameItem(Material.RAW_FISH, ChatColor.AQUA + "A fish called Wanda");
+			wand = new ItemStack(Material.LEGACY_RAW_FISH);
+			wand = ItemUtility.renameItem(wand, ChatColor.AQUA + "A fish called Wanda");
+//			wand = Item.renameItem(Material.LEGACY_RAW_FISH, ChatColor.AQUA + "A fish called Wanda");
 		} else {
-			wand = Item.renameItem(Material.STICK, ChatColor.AQUA + "Wand");
+			wand = new ItemStack(Material.STICK);
+			wand = ItemUtility.renameItem(wand, ChatColor.AQUA + "Wand");
+//			wand = Item.renameItem(Material.STICK, ChatColor.AQUA + "Wand");
 		}
 		
 		ItemMeta meta = wand.getItemMeta();

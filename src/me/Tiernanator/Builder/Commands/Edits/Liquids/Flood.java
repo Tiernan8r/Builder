@@ -29,6 +29,7 @@ public class Flood implements CommandExecutor {
 		plugin = main;
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public boolean onCommand(CommandSender sender, Command command,
 			String label, String[] args) {
@@ -70,9 +71,9 @@ public class Flood implements CommandExecutor {
 				.getBuildingMaterial(materialName);
 
 		if (!(region.contains(Material.WATER)
-				|| region.contains(Material.STATIONARY_WATER)
+				|| region.contains(Material.LEGACY_STATIONARY_WATER)
 				|| region.contains(Material.LAVA)
-				|| region.contains(Material.STATIONARY_LAVA)
+				|| region.contains(Material.LEGACY_STATIONARY_LAVA)
 				|| region.contains(Material.AIR))) {
 			player.sendMessage(bad + "There is no space to flood...");
 			return false;

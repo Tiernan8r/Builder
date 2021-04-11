@@ -1,10 +1,12 @@
 package me.Tiernanator.Builder.Materials;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.logging.Level;
-
+import me.Tiernanator.Builder.BuilderMain;
+import me.Tiernanator.Utilities.Colours.Colour;
+import me.Tiernanator.Utilities.File.ConfigAccessor;
+import me.Tiernanator.Utilities.Materials.BuildingMaterial;
+import me.Tiernanator.Utilities.Menu.Menu;
+import me.Tiernanator.Utilities.Menu.MenuAction;
+import me.Tiernanator.Utilities.Menu.MenuEntry;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
@@ -13,14 +15,10 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-import me.Tiernanator.Builder.BuilderMain;
-import me.Tiernanator.Utilities.Colours.Colour;
-import me.Tiernanator.Utilities.File.ConfigAccessor;
-import me.Tiernanator.Utilities.Locations.Zones.ZoneName;
-import me.Tiernanator.Utilities.Materials.BuildingMaterial;
-import me.Tiernanator.Utilities.Menu.Menu;
-import me.Tiernanator.Utilities.Menu.MenuAction;
-import me.Tiernanator.Utilities.Menu.MenuEntry;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.logging.Level;
 
 public class ListMaterials implements CommandExecutor {
 
@@ -48,7 +46,7 @@ public class ListMaterials implements CommandExecutor {
 		for (BuildingMaterial buildingMaterial : BuildingMaterial
 				.allBuildingMaterials()) {
 
-			String materialName = ChatColor.BLUE + "§L"
+			String materialName = ChatColor.BLUE + "ï¿½L"
 					+ buildingMaterial.getName();
 
 			ItemStack materialItem = getValidItemForDisplay(buildingMaterial);
@@ -107,7 +105,8 @@ public class ListMaterials implements CommandExecutor {
 				}
 
 				materialName = materialName.toUpperCase();
-				materialName = ZoneName.parseNameToZoneCode(materialName);
+				//TODO Figure out what ZoneName did (it was in Utilities but got removed...)
+//				materialName = ZoneName.parseNameToZoneCode(materialName);
 
 				material = Material.getMaterial(materialName);
 				

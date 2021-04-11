@@ -1,11 +1,11 @@
 package me.Tiernanator.Builder.Events;
+
+import me.Tiernanator.Utilities.Players.SelectAction;
 import org.bukkit.Location;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
-
-import me.Tiernanator.Utilities.Players.SelectAction;
 
 //This is the custom wand select block event that is called by PlayerInteract, it just contains functions that
 //return all the values needed

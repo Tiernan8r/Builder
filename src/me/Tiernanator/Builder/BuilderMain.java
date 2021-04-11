@@ -1,29 +1,16 @@
 package me.Tiernanator.Builder;
 
-import org.bukkit.plugin.PluginManager;
-import org.bukkit.plugin.java.JavaPlugin;
-
 import me.Tiernanator.Builder.Commands.Butcher;
-import me.Tiernanator.Builder.Commands.Platform;
-import me.Tiernanator.Builder.Commands.Volume;
-import me.Tiernanator.Builder.Commands.Wand;
-import me.Tiernanator.Builder.Commands.Edits.ChangeTo;
-import me.Tiernanator.Builder.Commands.Edits.Clear;
-import me.Tiernanator.Builder.Commands.Edits.Fill;
-import me.Tiernanator.Builder.Commands.Edits.Flip;
-import me.Tiernanator.Builder.Commands.Edits.Remove;
-import me.Tiernanator.Builder.Commands.Edits.Replace;
+import me.Tiernanator.Builder.Commands.Edits.*;
 import me.Tiernanator.Builder.Commands.Edits.Cuboidular.Base;
 import me.Tiernanator.Builder.Commands.Edits.Cuboidular.Cap;
 import me.Tiernanator.Builder.Commands.Edits.Cuboidular.Walls;
 import me.Tiernanator.Builder.Commands.Edits.Liquids.Drain;
 import me.Tiernanator.Builder.Commands.Edits.Liquids.Flood;
-import me.Tiernanator.Builder.Commands.RegionSelect.Bowl;
-import me.Tiernanator.Builder.Commands.RegionSelect.Circle;
-import me.Tiernanator.Builder.Commands.RegionSelect.Cuboid;
-import me.Tiernanator.Builder.Commands.RegionSelect.Cylinder;
-import me.Tiernanator.Builder.Commands.RegionSelect.Dome;
-import me.Tiernanator.Builder.Commands.RegionSelect.Sphere;
+import me.Tiernanator.Builder.Commands.Platform;
+import me.Tiernanator.Builder.Commands.RegionSelect.*;
+import me.Tiernanator.Builder.Commands.Volume;
+import me.Tiernanator.Builder.Commands.Wand;
 import me.Tiernanator.Builder.Events.PlayerInteract;
 import me.Tiernanator.Builder.Events.Set;
 import me.Tiernanator.Builder.Events.WandBreakBlock;
@@ -31,13 +18,10 @@ import me.Tiernanator.Builder.Events.WandSelect;
 import me.Tiernanator.Builder.Materials.ListMaterials;
 import me.Tiernanator.Builder.Undo.Undo;
 import me.Tiernanator.Builder.Undo.UndoConfig;
-import me.Tiernanator.Builder.WorldTemplates.GetTemplate;
-import me.Tiernanator.Builder.WorldTemplates.ListTemplates;
-import me.Tiernanator.Builder.WorldTemplates.Move;
-import me.Tiernanator.Builder.WorldTemplates.RemoveTemplate;
-import me.Tiernanator.Builder.WorldTemplates.Save;
-import me.Tiernanator.Builder.WorldTemplates.TemplateConfig;
+import me.Tiernanator.Builder.WorldTemplates.*;
 import me.Tiernanator.Utilities.SQL.SQLServer;
+import org.bukkit.plugin.PluginManager;
+import org.bukkit.plugin.java.JavaPlugin;
 
 public class BuilderMain extends JavaPlugin {
 	

@@ -27,6 +27,7 @@ public class Drain implements CommandExecutor {
 		plugin = main;
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public boolean onCommand(CommandSender sender, Command command,
 			String label, String[] args) {
@@ -53,9 +54,9 @@ public class Drain implements CommandExecutor {
 		}
 
 		if (!(region.contains(Material.WATER)
-				|| region.contains(Material.STATIONARY_WATER)
+				|| region.contains(Material.LEGACY_STATIONARY_WATER)
 				|| region.contains(Material.LAVA)
-				|| region.contains(Material.STATIONARY_LAVA))) {
+				|| region.contains(Material.LEGACY_STATIONARY_LAVA))) {
 			player.sendMessage(bad + "There are no liquids to drain...");
 			return false;
 		}
